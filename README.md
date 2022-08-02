@@ -37,13 +37,13 @@ Set the following custom configuration variables:
 | RESIN_HOST_CONFIG_overscan_right | 0 |
 | RESIN_HOST_CONFIG_overscan_top | 0 |
 
-After you enter these values, your containers will restart and soon your device should start displaying a web page. The browser block has many configuration settings such as kiosk mode that may be appropriate. See them [here](https://github.com/balenablocks/browser#environment-variables)
+After you enter these values, your containers will restart and soon your device should start displaying a web page. The browser block has many configuration settings such as kiosk mode that may be appropriate. See them [here](https://github.com/balenablocks/browser#environment-variables).
 
 A few things to note about the HyperPixel display: Due to the way it interacts with the serial port, the device may not boot in development mode when attached to the display. In addition, the HyperPixel uses "basically all" of the GPIO pins, making them unavailable for HATs or other uses. There is however an alternate I2C interface on the back of the HyperPixel.
 
 ### Touch screen settings
 
-The touch input may be inverted from the actual display on the creen. To fix this, set the following device variables on the browser block:
+The touch input may be inverted from the actual display on the screen. To fix this, set the following device variables on the browser block:
 
 `ROTATE_DISPLAY` value = `inverted`
 
