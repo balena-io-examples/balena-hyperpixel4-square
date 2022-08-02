@@ -1,0 +1,9 @@
+version: '2.1'
+services:
+  browser:
+    image: bhcr.io/balenablocks/browser-armv7hf
+    privileged: true
+    network_mode: host
+    ports:
+        - '5011'
+        - '35173'
