@@ -1,18 +1,16 @@
 # balena-hyperpixel4-square
 Minimal example of using [Pimoroni HyperPixel 4.0 Square Touch Display](https://shop.pimoroni.com/products/hyperpixel-4-square?variant=30138251444307) with touch on balena
 
+### Usage
 For starters, please note how this display operates per https://github.com/pimoroni/hyperpixel4/issues/151#issuecomment-907754480:
 
-```
 "The screen doesn't have an SPI data interface or anything befitting basic init and usage from Python. It either runs over DPI driven by the Raspberry Pi's GPIO or - for all intents and purposes - it doesn't run at all. The speed and timing requirements for generating a DPI signal are pretty far outside the grasp of Python.
 
 That said if you let the Pi handle the display- you can just use any Python [or other language] GUI methods to display images on it. This can be anything from PIL running in X and using the "display()" method on an image (if memory serves) or using fullscreen pygame..."
-```
 
 For our example, we'll "let the Pi handle the display" by using the balena [browser block](https://github.com/balenablocks/browser) which has its own X Window server built in. Using the docker-compose in this repo gives you a customizeable browser that displays on the Hyperpixel with touch screen support (assuming you make all of the settings below.)
 
 To extend this example, you could include a web server service that runs a web application, or you could point the default page of the browser block to a publically-accessible app. Alternatively, you could provide your own display service (like [this](https://hub.balena.io/organizations/balenablocks/blocks/xserver)) and create your own GUI using Python, etc...
-
 
 ### Device configuration
 
